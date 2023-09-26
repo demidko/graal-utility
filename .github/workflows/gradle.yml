@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: linux-app
-          path: build/graal/*
+          path: build/native/nativeCompile/*
   build-macos-app:
     runs-on: macos-13
     steps:
@@ -47,7 +47,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: macos-app
-          path: build/graal/*
+          path: build/native/nativeCompile/*
   build-windows-app:
     runs-on: windows-2022
     steps:
@@ -67,4 +67,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: windows-app
-          path: build/graal/*
+          path: build/native/nativeCompile/*
