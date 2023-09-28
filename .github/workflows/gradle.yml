@@ -58,11 +58,11 @@ jobs:
       - name: Set up GraalVM
         uses: graalvm/setup-graalvm@v1
         with:
-          java-version: '21'
+          java-version: '20'
           distribution: 'graalvm'
           cache: gradle
       - name: Build with Gradle
-        run: ./gradlew nativeCompile
+        run: ./gradlew nativeCompile --no-daemon
       - name: Store artifacts
         uses: actions/upload-artifact@v3
         with:
