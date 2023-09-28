@@ -62,7 +62,7 @@ jobs:
           distribution: 'graalvm'
           cache: gradle
       - name: Build with Gradle
-        run: ./gradlew nativeCompile --no-daemon
+        run: ./gradlew nativeCompile
       - name: Store artifacts
         uses: actions/upload-artifact@v3
         with:
