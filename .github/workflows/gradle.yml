@@ -30,7 +30,7 @@ jobs:
           name: linux-app
           path: build/native/nativeCompile/*
   build-macos-intel-app:
-    runs-on: macos-latest
+    runs-on: macos-13
     steps:
       - uses: actions/checkout@v3
       - name: Set up GraalVM
@@ -49,7 +49,7 @@ jobs:
           name: macos-app
           path: build/native/nativeCompile/*
   build-macos-apple-silicon-app:
-    runs-on: macos-latest-xlarge
+    runs-on: macos-13-xl
     steps:
       - uses: actions/checkout@v3
       - name: Set up GraalVM
