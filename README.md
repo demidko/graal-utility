@@ -4,7 +4,7 @@ The cross-platform native Kotlin command line tool template.
 
 ## Building jar file
 
-You will need Java 20 or higher. To build the utility, run the command:
+You will need Java 21 or higher. To build the utility, run the command:
 
 ```shell
 ./gradlew clean installDist
