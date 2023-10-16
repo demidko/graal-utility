@@ -6,8 +6,8 @@ repositories {
 }
 plugins {
   application
-  kotlin("jvm") version "1.9.10"
-  id("org.graalvm.buildtools.native") version "0.9.26"
+  kotlin("jvm") version "1.9.20-RC"
+  id("org.graalvm.buildtools.native") version "0.9.27"
 }
 dependencies {
   implementation("com.google.iot.cbor:cbor:0.01.02")
@@ -24,7 +24,7 @@ dependencies {
   testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 tasks.withType<KotlinCompile> {
-  kotlinOptions.jvmTarget = "20"
+  kotlinOptions.jvmTarget = "21"
   kotlinOptions.freeCompilerArgs += listOf(
     "-Xvalue-classes",
     "-opt-in=kotlin.ExperimentalStdlibApi",
@@ -32,8 +32,8 @@ tasks.withType<KotlinCompile> {
   )
 }
 tasks.withType<JavaCompile> {
-  sourceCompatibility = "20"
-  targetCompatibility = "20"
+  sourceCompatibility = "21"
+  targetCompatibility = "21"
 }
 tasks.test {
   useJUnitPlatform()

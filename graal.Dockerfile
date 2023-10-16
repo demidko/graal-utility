@@ -1,12 +1,9 @@
-FROM ghcr.io/graalvm/native-image-community as builder
+FROM gradle:jdk21-graal as builder
 WORKDIR /project
-COPY gradle ./gradle
-COPY gradlew ./gradlew
 COPY src ./src
 COPY build.gradle.kts ./build.gradle.kts
 COPY settings.gradle.kts ./settings.gradle.kts
-RUN microdnf install findutils
-RUN ./gradlew clean nativeCompile
+RUN gradle clean nativeCompile
 
 FROM debian as utility
 WORKDIR /root
