@@ -55,5 +55,6 @@ graalvmNative {
   toolchainDetection.set(false)
 }
 tasks.nativeCompile {
+  options.get().buildArgs("--no-fallback")
   dependsOn(tasks.test)
 }
