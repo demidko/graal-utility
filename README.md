@@ -14,7 +14,7 @@ You can also build the utility into native executable file or Docker image.
 
 ## Building native executable file
 
-You will need GraalVM 20 and `native-image` pre-installed:
+You will need GraalVM 21 and `native-image` pre-installed:
 
 ```shell
 ./gradlew clean nativeCompile
