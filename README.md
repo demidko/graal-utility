@@ -33,5 +33,11 @@ docker build . -t jvm-app-image
 ## Building Docker image with native code
 
 ```shell
+docker build . -f graal.Dockerfile -t native-app-image
+```
+
+or
+
+```shell
 docker build --platform linux/amd64 . -f graal.Dockerfile -t native-app-image
 ```
