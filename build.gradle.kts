@@ -6,7 +6,7 @@ repositories {
 }
 plugins {
   application
-  kotlin("jvm") version "1.9.20-RC"
+  kotlin("jvm") version "1.9.20-RC2"
   id("org.graalvm.buildtools.native") version "0.9.27"
 }
 dependencies {
